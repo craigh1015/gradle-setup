@@ -5,4 +5,4 @@ steps:
 artifacts:
   objects:
     location: 'gs://13980-build-artifacts/'
-    paths: [build/reports/**]
+    paths: [build/reports/*/*]
