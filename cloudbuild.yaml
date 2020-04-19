@@ -1,3 +1,8 @@
 steps:
-- name: 'gcr.io/cloud-builders/gradle'
-  args: ['build']
+- name: gradle:5.6.2-jdk8
+  entrypoint: gradle
+  args: ['build', 'jacocoTestReport']
+artifacts:
+  objects:
+    location: 'gs://13980-build-artifacts/'
+    paths: [build/reports/**]
